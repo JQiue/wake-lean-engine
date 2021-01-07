@@ -1,0 +1,13 @@
+{
+  "name": "wakeleanengine",
+  "version": "0.0.1",
+  "main": "app.js",
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "JQiue",
+  "license": "ISC"
+}
