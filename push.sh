@@ -1,3 +1,3 @@
 git add .
-git commit -m "fix(BUG): 修复无法获取正确时间而导致服务器一直被唤醒的问题"
-git push origin master
+git commit -m "feat: 可通过修改一些配置项来控制唤醒时刻区间"
+git push https://github.com/JQiue/wake-lean-engine.git master
