@@ -1,6 +1,6 @@
 const https = require('https');
 const http = require('http');
-const wakeInterval = Number(process.env.INTERVAL_TIME) || 6000;
+const wakeInterval = Number(process.env.INTERVAL_TIME) || 60000;
 const consoleLog = process.env.LOG || 1;
 const startHour = process.env.START_HOUR || 8;
 const endHour = process.env.END_HOUR || 2;
