@@ -7,7 +7,7 @@ const endHour = process.env.END_HOUR || 2;
 const wake1 = process.env.WAKE1;
 const wake2 = process.env.WAKE2;
 const url_list = process.env.CALL_URLS.split(';');
-const currenStartUpHour = (new Date().getHours() - 8) % 24;
+const currenStartUpHour = (new Date().getHours() + 8) % 24;
 
 function wake(url) {
   https.get(url, res => {
@@ -18,7 +18,7 @@ function wake(url) {
 function startWake() {
   currenStartUpHour >= 12 && currenStartUpHour <= 23 ? wake(wake1) : wake(wake2);
   setInterval(() => {
-    const currentHour = (new Date().getHours() - 8) % 24;
+    const currentHour = (new Date().getHours() + 8) % 24;
     if (currentHour >= 12 && currentHour <= 23) {
       wake(wake1);
       currentHour >= startHour || currentHour < endHour ? url_list.forEach(url => wake(url)) : null;
